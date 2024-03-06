@@ -119,4 +119,11 @@ class InformasiController extends Controller
         $dataDetail = InformasiModel::getDetailDataBerita__($id)->first();
         return view('admin.informasi.informasi_detail', compact('dataDetail'));
     }
+
+
+    public function detail_user($id)
+    {
+        $data_informasi =  InformasiModel::getDetailDataBerita__($id)->first();
+        return view('user_views.informasi_detail', compact('data_informasi'));
+    }
 }

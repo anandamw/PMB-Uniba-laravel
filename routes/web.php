@@ -27,6 +27,7 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/', [UserController::class, 'index']);
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
+    Route::get('detail/{id}', [InformasiController::class, 'detail_user']);
 });
 
 Route::middleware(['auth'])->group(function () {
