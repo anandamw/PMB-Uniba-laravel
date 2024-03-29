@@ -114,9 +114,7 @@
                         <!--================= Menu Structure =================-->
                         <div class="react-inner-menus">
                             <ul id="backmenu" class="react-menus home react-sub-shadow">
-                                <li> <a href="/">Home</a>
-
-                                </li>
+                                <li> <a href="/">Home</a></li>
 
                                 <li> <a href="coureses-grid.html">Informasi</a>
                                     <ul>
@@ -128,21 +126,29 @@
                                         @endforeach
                                     </ul>
                                 </li>
+
                                 <li> <a href="coureses-grid.html">Beasisiwa</a>
                                     <ul>
-                                        <li><a href="coureses-grid.html">Courses</a></li>
-                                        <li><a href="coureses-right-sidebar.html">Right Sidebar</a></li>
-                                        <li><a href="coureses-list.html">Courses List</a></li>
-                                        <li><a href="coureses-single.html">Courses Single</a></li>
+                                        @foreach (beasiswa() as $getBeasiswa)
+                                            <li><a
+                                                    href="/beasiswa/{{ $getBeasiswa['token_beasiswa'] }}">{{ $getBeasiswa['nama_beasiswa'] }}</a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </li>
+
+
                                 <li> <a href="blog.html">Jalur Penerimaan</a>
                                     <ul>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Single</a></li>
+                                        @foreach (jalur_penerimaan() as $item)
+                                            <li><a
+                                                    href="/jalur-penerimaan/{{ $item['token'] }}">{{ $item['nama_jalur'] }}</a>
+                                            </li>
+                                        @endforeach
+
                                     </ul>
                                 </li>
-                                <li> <a href="contact.html">Team PMB</a></li>
+                                <li> <a href="/team-pmb">Team PMB</a></li>
                             </ul>
                             <div class="searchbar-part">
                                 <div class="react-login">
