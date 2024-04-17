@@ -99,4 +99,9 @@ class JalurPenerimaanController extends Controller
         $dataDetail = JalurPenerimaanModel::getAllJalurPenerimaanDetail__($id)->first();
         return view('admin.jalurPenerimaan.jalurPenerimaan_detail', compact('dataDetail'));
     }
+    public function detail_user($id)
+    {
+        $dataDetail = JalurPenerimaanModel::getAllJalurPenerimaanDetail__($id)->first();
+        return view('user_views.jalur_penerimaan_detail', compact('dataDetail'));
+    }
 }

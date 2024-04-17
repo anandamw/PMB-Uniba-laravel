@@ -116,7 +116,7 @@
                             <ul id="backmenu" class="react-menus home react-sub-shadow">
                                 <li> <a href="/">Home</a></li>
 
-                                <li> <a href="coureses-grid.html">Informasi</a>
+                                <li> <a href="#">Informasi</a>
                                     <ul>
                                         @foreach (master_berita() as $get)
                                             <li>
@@ -128,7 +128,7 @@
                                     </ul>
                                 </li>
 
-                                <li> <a href="coureses-grid.html">Beasisiwa</a>
+                                <li> <a href="#">Beasisiwa</a>
                                     <ul>
                                         @foreach (beasiswa() as $getBeasiswa)
                                             <li><a
@@ -139,17 +139,17 @@
                                 </li>
 
 
-                                <li> <a href="blog.html">Jalur Penerimaan</a>
+                                <li> <a href="#">Jalur Penerimaan</a>
                                     <ul>
                                         @foreach (jalur_penerimaan() as $item)
                                             <li><a
-                                                    href="/jalur-penerimaan/{{ $item['token'] }}">{{ $item['nama_jalur'] }}</a>
+                                                    href="/jalur-penerimaan/detail/{{ $item['token'] }}">{{ $item['nama_jalur'] }}</a>
                                             </li>
                                         @endforeach
 
                                     </ul>
                                 </li>
-                                <li> <a href="/team-pmb">Team PMB</a></li>
+                                <li> <a href="#">Team PMB</a></li>
                             </ul>
                             <div class="searchbar-part">
                                 <div class="react-login">
@@ -161,6 +161,7 @@
                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                             <circle cx="12" cy="7" r="4"></circle>
                                         </svg>Daftar</a>
+                                        
                                 </div>
                             </div>
                         </div>

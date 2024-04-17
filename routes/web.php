@@ -29,6 +29,7 @@ Route::middleware(['guest'])->group(function () {
     Route::post('/login', [LoginController::class, 'login']);
     Route::get('/informasi/detail/{id}', [InformasiController::class, 'detail_user']);
     Route::get('beasiswa/detail/{id}', [BeasiswaController::class, 'detail_user']);
+    Route::get('jalur-penerimaan/detail/{id}', [JalurPenerimaanController::class, 'detail_user']);
 });
 
 Route::middleware(['auth'])->group(function () {
