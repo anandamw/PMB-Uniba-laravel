@@ -12,11 +12,11 @@
                     <div class="breadcrumbs-inner">
                         <div class="container">
                             <div class="breadcrumbs-text">
-                                <h1 class="breadcrumbs-title">{{ $data_informasi->judul_berita }}</h1>
+                                <h1 class="breadcrumbs-title">{{ $BeasiswaDetail->nama_beasiswa }}</h1>
                                 <div class="back-nav">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>{{ $data_informasi->judul_berita }}</li>
+                                        <li><a href="/">Home</a></li>
+                                        <li>{{ $BeasiswaDetail->nama_beasiswa }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -32,12 +32,12 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="blog-grid">
-                                {{-- @foreach ($data_informasi as $informasi) --}}
+                                {{-- @foreach ($BeasiswaDetail as $informasi) --}}
                                 <div class="single-blog">
                                     <div class="inner-blog">
                                         <div class="blog-img">
-                                            <a href="#" class="cate">{{ $data_informasi->judul_berita }}</a>
-                                            <img src="{{ asset('informasi') }}/{{ $data_informasi->foto_berita }}"
+                                            <a href="#" class="cate">{{ $BeasiswaDetail->nama_beasiswa }}</a>
+                                            <img src="{{ asset('beasiswa') }}/{{ $BeasiswaDetail->foto_beasiswa }}"
                                                 alt="Blog Image">
                                         </div>
                                         <div class="blog-content">
@@ -68,7 +68,7 @@
                                             </ul>
 
                                             <h3 class="blog-title"><a
-                                                    href="blog-details.html">{{ $data_informasi->judul_berita }}</a>
+                                                    href="blog-details.html">{{ $BeasiswaDetail->nama_beasiswa }}</a>
                                             </h3>
                                             <div class="button__sec">
                                                 <a href="blog-details.html" class="blog-btn">Read More <svg

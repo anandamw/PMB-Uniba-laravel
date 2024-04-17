@@ -13,6 +13,8 @@ use App\Models\KategoriModel;
 if (!function_exists('master_berita')) {
     function master_berita()
     {
+
+        $data = [];
         $kategori = InformasiModel::all();
         foreach ($kategori as $get) {
             $data[] = [
@@ -30,6 +32,8 @@ if (!function_exists('master_berita')) {
 if (!function_exists('beasiswa')) {
     function beasiswa()
     {
+
+        $data = [];
         $dataBeasiswa = BeasiswaModel::all();
         foreach ($dataBeasiswa as $getData) {
             $data[] = [
@@ -50,6 +54,8 @@ if (!function_exists('jalur_penerimaan')) {
 
     function jalur_penerimaan()
     {
+        $data = [];
+
         $dataJalurPenerimaan = JalurPenerimaanModel::all();
         foreach ($dataJalurPenerimaan  as $getData) {
             $data[] = [

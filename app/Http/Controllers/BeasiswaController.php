@@ -91,7 +91,14 @@ class BeasiswaController extends Controller
     public function detail($id)
     {
         $dataDetail = BeasiswaModel::getBeasiswaDetail__($id)->first();
-
         return view('admin.beasiswas.beasiswa_detail', compact('dataDetail'));
+    }
+
+
+    public function detail_user($id){
+    
+        $BeasiswaDetail = BeasiswaModel::getBeasiswaDetail__($id)->first();
+        return view('user_views.beasiswa_detail', compact('BeasiswaDetail'));
+
     }
 }

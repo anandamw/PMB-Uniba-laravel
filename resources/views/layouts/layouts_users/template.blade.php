@@ -120,7 +120,8 @@
                                     <ul>
                                         @foreach (master_berita() as $get)
                                             <li>
-                                                <a href="/detail/{{ $get['token_berita'] }} ">{{ $get['judul_berita'] }}
+                                                <a href="/informasi/detail/{{ $get['token_berita'] }} ">
+                                                    {{ $get['judul_berita'] }}
                                                 </a>
                                             </li>
                                         @endforeach
@@ -131,7 +132,7 @@
                                     <ul>
                                         @foreach (beasiswa() as $getBeasiswa)
                                             <li><a
-                                                    href="/beasiswa/{{ $getBeasiswa['token_beasiswa'] }}">{{ $getBeasiswa['nama_beasiswa'] }}</a>
+                                                    href="/beasiswa/detail/{{ $getBeasiswa['token_beasiswa'] }}">{{ $getBeasiswa['nama_beasiswa'] }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
